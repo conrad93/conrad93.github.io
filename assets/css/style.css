@@ -1,0 +1,224 @@
+:root{
+    --primaryColor: #222831;
+    --secondaryColor: #393e46;
+    --lightColor: #7bc74d;
+    --textColor: #eeeeee;
+    --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondaryColor);
+    overflow-x: hidden;
+}
+h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+p{
+    font-size: 16px;
+    font-weight:500
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.spacer{
+    height: 60px;
+}
+.navbar{
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: var(--shadow);
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--textColor);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar-logo{
+    margin-left: 95px;
+    font-size: 24px;
+}
+.navbar-item{
+    margin-right: 95px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+#home{
+    margin: 150px 125px 0px 125px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-title h1{
+    color: var(--textColor);
+    font-size: 72px;
+    text-shadow: var(--shadow);
+    margin: 0;
+}
+.home-title button{
+    box-shadow: var(--shadow);
+    background-color: var(--lightColor);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 14px 40px;
+    margin-top: 15px;
+}
+.home-title button a{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--textColor);
+    text-decoration: none;
+}
+.face{
+    box-shadow: var(--shadow);
+    background-color: var(--lightColor);
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+    position: relative;
+}
+.eyes{
+    background-color: var(--primaryColor);
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+}
+.left-eye{
+    left: 62.5%;
+}
+.right-eye{
+    right: 62.5%;
+}
+.lips{
+    width: 150px;
+    height: 150px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid var(--primaryColor);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section{
+    margin: 150px 125px 0px 125px;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    text-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    text-align: center;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+}
+#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "about-title about-title" "about-col-1 about-col-2";
+    justify-items: center;
+}
+.about-title{
+    grid-area: about-title;
+}
+.about-col-1{
+    grid-area: about-col-1;
+    padding: 10px;
+}
+.about-col-2{
+    grid-area: about-col-2;
+    padding: 10px;
+}
+#skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "skills-title skills-title skills-title" "skills-col-1 skills-col-2 skills-col-3" "skills-col-4 skills-col-5 skills-col-6" "skills-col-7 skills-col-8 skills-col-9";
+    justify-items: center;
+}
+.skills-title{
+    grid-area: skills-title;
+}
+.skills-col-1{
+    grid-area: skills-col-1;
+}
+.skills-col-2{
+    grid-area: skills-col-2;
+}
+.skills-col-3{
+    grid-area: skills-col-3;
+}
+.skills-col-4{
+    grid-area: skills-col-4;
+}
+.skills-col-5{
+    grid-area: skills-col-5;
+}
+.skills-col-6{
+    grid-area: skills-col-6;
+}
+.skills-col-7{
+    grid-area: skills-col-7;
+}
+.skills-col-8{
+    grid-area: skills-col-8;
+}
+.skills-col-9{
+    grid-area: skills-col-9;
+}
+.icon{
+    font-size: 36px;
+    color: var(--textColor);
+    cursor: pointer;
+}
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "contact-title contact-title contact-title contact-title" "contact-col-1 contact-col-2 contact-col-3 contact-col-4";
+    justify-items: center;
+    padding: 0px 50px 50px 50px;
+}
+.contact-title{
+    grid-area: contact-title;
+}
+.contact-col-1{
+    grid-area: contact-col-1;
+    padding: 10px;
+}
+.contact-col-2{
+    grid-area: contact-col-2;
+    padding: 10px;
+}
+.contact-col-3{
+    grid-area: contact-col-3;
+    padding: 10px;
+}
+.contact-col-4{
+    grid-area: contact-col-4;
+    padding: 10px;
+}
+footer{
+    margin: 150px 125px 0px 125px;
+    color: var(--textColor);
+    text-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

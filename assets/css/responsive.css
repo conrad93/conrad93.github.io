@@ -1,0 +1,47 @@
+@media screen and (max-width: 900px) {
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .icon{
+        font-size: 20px;
+    }
+    .navbar{
+        padding: 15px 0px;
+    }
+    .navbar a{
+        padding: 0px 5px;
+    }
+    .navbar-logo{
+        margin-left: 10%;
+    }
+    .navbar-item{
+        margin-right: 10%;
+    }
+    #home{
+        margin: 100px 10% 0px 10%;
+    }
+    .face{
+        display: none;
+    }
+    .home-title h1{
+        font-size: 36px;
+    }
+    .home-title button{
+        padding: 10px 24px;
+    }
+    .home-title button a{
+        font-size: 12px;
+    }
+    .section{
+        margin: 100px 10% 0px 10%;;
+    }
+    footer{
+        margin: 100px 10% 0px 10%;
+    }
+}
