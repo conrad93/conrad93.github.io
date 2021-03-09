@@ -3,7 +3,7 @@
         font-size: 20px;
     }
     p{
-        font-size: 12px;
+        font-size: 14px;
     }
     .title{
         font-size: 20px;
@@ -36,10 +36,14 @@
         padding: 10px 24px;
     }
     .home-title button a{
-        font-size: 12px;
+        font-size: 14px;
     }
     .section{
         margin: 100px 10% 0px 10%;;
+    }
+    #about{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "about-title about-title" "about-col-1 about-col-2" "about-col-3 .";
     }
     footer{
         margin: 100px 10% 0px 10%;
