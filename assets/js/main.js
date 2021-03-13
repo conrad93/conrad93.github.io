@@ -4,6 +4,7 @@ var skills = document.getElementById('skills');
 var contact = document.getElementById('contact');
 var footer = document.getElementsByTagName("footer");
 var navbarItem = document.getElementsByClassName("navbar-item");
+var switchInput = document.getElementsByClassName("switch-input");
 
 function pageNav(id) {
     var offsetTop;
@@ -39,4 +40,9 @@ window.addEventListener("scroll", () => {
         navbarItem[0].children[1].classList.remove("active");
         navbarItem[0].children[2].classList.remove("active");
     }
+});
+
+switchInput[0].addEventListener('change', () => {
+    document.body.classList.toggle('dark-theme');
+    document.body.classList.toggle('light-theme');
 });

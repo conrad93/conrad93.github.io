@@ -1,9 +1,25 @@
 :root{
-    --primaryColor: #222831;
-    --secondaryColor: #393e46;
-    --lightColor: #7bc74d;
-    --textColor: #eeeeee;
+    --primaryDark: #222831;
+    --secondaryDark: #393e46;
+    --infoDark: #7bc74d;
+    --textDark: #eeeeee;
+    --primaryLight: #f7f6e7;
+    --secondaryLight: #e7e6e1;
+    --infoLight: #f2a154;
+    --textLight: #314e52;
     --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dark-theme{
+    --primaryColor: var(--primaryDark);
+    --secondaryColor: var(--secondaryDark);
+    --lightColor: var(--infoDark);
+    --textColor: var(--textDark);
+}
+.light-theme{
+    --primaryColor: var(--primaryLight);
+    --secondaryColor: var(--secondaryLight);
+    --lightColor: var(--infoLight);
+    --textColor: var(--textLight);
 }
 html{
     scroll-behavior: smooth;
@@ -13,6 +29,7 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: var(--secondaryColor);
+    transition: background-color 0.5s;
 }
 h3{
     font-size: 24px;
@@ -37,12 +54,14 @@ header{
     justify-content: space-between;
     padding: 15px;
     box-shadow: var(--shadow);
+    transition: background-color 0.5s;
 }
 .navbar a{
     text-decoration: none;
     color: var(--textColor);
     padding-left: 15px;
     padding-right: 15px;
+    transition: color 1s;
 }
 .active{
     color: var(--lightColor) !important;
@@ -67,6 +86,7 @@ header{
     font-size: 72px;
     text-shadow: var(--shadow);
     margin: 0;
+    transition: color 1s;
 }
 .home-title button{
     box-shadow: var(--shadow);
@@ -76,12 +96,14 @@ header{
     border-radius: 8px;
     padding: 14px 40px;
     margin-top: 15px;
+    transition: background-color 0.5s;
 }
 .home-title button a{
     font-size: 16px;
     font-weight: bold;
     color: var(--textColor);
     text-decoration: none;
+    transition: color 1s;
 }
 .face{
     box-shadow: var(--shadow);
@@ -90,6 +112,7 @@ header{
     height:250px;
     border-radius: 50%;
     position: relative;
+    transition: background-color 0.5s;
 }
 .eyes{
     background-color: var(--primaryColor);
@@ -98,6 +121,7 @@ header{
     border-radius: 50%;
     position: absolute;
     top: 25%;
+    transition: background-color 0.5s;
 }
 .left-eye{
     left: 62.5%;
@@ -115,6 +139,7 @@ header{
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
+    transition: border-bottom 0.5s;
 }
 .section{
     margin: 150px 125px 0px 125px;
@@ -124,6 +149,8 @@ header{
     box-shadow: var(--shadow);
     border-radius: 8px;
     text-align: center;
+    transition: background-color 0.5s;
+    transition: color 1s;
 }
 .title{
     font-size: 24px;
@@ -194,6 +221,7 @@ header{
     font-size: 36px;
     color: var(--textColor);
     cursor: pointer;
+    transition: color 1s;
 }
 #contact{
     display: grid;
@@ -229,6 +257,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: color 1s;
 }
 .tooltip{
     position: relative;
@@ -253,6 +282,8 @@ footer{
     margin-left: -50px;
     opacity: 0;
     transition: opacity 1s;
+    transition: background-color 0.5s;
+    transition: color 1s;
 }
 .tooltip .tooltip-text::after{
     content: "";
@@ -267,4 +298,31 @@ footer{
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
+}
+.switch{
+    display: block;
+    width: 30px;
+    border-radius: 50px;
+    border: 1px solid var(--textColor);
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    box-shadow: var(--shadow);
+    transition: background-color 0.5s;
+    transition: border 1s;
+}
+.switch-input{
+    display: none;
+}
+.switch-slider{
+    background-color: var(--lightColor);
+    transition: 0.5s;
+    border-radius: 34px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+}
+.switch-input:checked + .switch-slider{
+    transform: translateX(8px);
 }
