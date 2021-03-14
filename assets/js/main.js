@@ -5,6 +5,8 @@ var contact = document.getElementById('contact');
 var footer = document.getElementsByTagName("footer");
 var navbarItem = document.getElementsByClassName("navbar-item");
 var switchInput = document.getElementsByClassName("switch-input");
+var loader = document.getElementsByClassName("loader");
+var main = document.getElementsByClassName("main");
 
 function pageNav(id) {
     var offsetTop;
@@ -43,6 +45,19 @@ window.addEventListener("scroll", () => {
 });
 
 switchInput[0].addEventListener('change', () => {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
+    main[0].classList.toggle('dark-theme');
+    main[0].classList.toggle('light-theme');
 });
+
+function loaderFunction() {
+    setTimeout(() => {
+        loader[0].style.opacity = 0;        
+        loader[0].style.display = "none";
+        main[0].style.display = "block";
+        setTimeout(() => {
+            main[0].style.opacity = 1;
+        }, 50);        
+    }, 2000);
+}
+
+window.addEventListener('load', loaderFunction);

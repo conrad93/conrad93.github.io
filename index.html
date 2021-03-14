@@ -11,152 +11,163 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
-    <body class="dark-theme bg-secondary">
+    <body>
 
-        <!-- Navbar -->
-        <header>
-            <nav class="navbar">
-                <div class="navbar-logo">
-                    <a href="javascript:void(0)" onclick="pageNav('top')">&lt;conrad/&gt;</a>
+        <!-- loader -->
+        <div class="loader">
+            <h1>&lt;conrad/&gt;</h1>
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- main container -->
+        <div class="main dark-theme bg-secondary">
+
+            <!-- Navbar -->
+            <header>
+                <nav class="navbar">
+                    <div class="navbar-logo">
+                        <a href="javascript:void(0)" onclick="pageNav('top')">&lt;conrad/&gt;</a>
+                    </div>
+                    <div class="navbar-item">
+                        <a href="javascript:void(0)" onclick="pageNav('about')">About</a>
+                        <a href="javascript:void(0)" onclick="pageNav('skills')">Skills</a>
+                        <a href="javascript:void(0)" onclick="pageNav('contact')">Contact</a>
+                        <a href="javascript:void(0)">
+                            <label class="switch">
+                                <input class="switch-input" type="checkbox"/>
+                                <span class="switch-slider"></span>
+                            </label>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Fixed navbar therefore spacer -->
+            <div class="spacer"></div>
+
+            <!-- Home -->
+            <section id="home">
+                <div class="home-title">
+                    <h1>
+                        I'm Conrad,
+                        <br>
+                        Web Developer.
+                    </h1>
+                    <button class="tooltip">
+                        <span class="tooltip-text">Download resume.</span>
+                        <a href="assets/documents/White and Black Minimalist Resume.pdf" download="conrad-resume">Resume</a>
+                    </button>
                 </div>
-                <div class="navbar-item">
-                    <a href="javascript:void(0)" onclick="pageNav('about')">About</a>
-                    <a href="javascript:void(0)" onclick="pageNav('skills')">Skills</a>
-                    <a href="javascript:void(0)" onclick="pageNav('contact')">Contact</a>
-                    <a href="javascript:void(0)">
-                        <label class="switch">
-                            <input class="switch-input" type="checkbox"/>
-                            <span class="switch-slider"></span>
-                        </label>
+                <div class="face">
+                    <div class="eyes left-eye"></div>
+                    <div class="eyes right-eye"></div>
+                    <div class="lips"></div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="section">
+                <div class="title about-title">
+                    <h1>ABOUT</h1>
+                </div>
+                <div class="about-col-1">
+                    <h3>Education</h3>
+                    <p>Bachelor of Science in <br> Information Technology</p>
+                    <p>2016-2019</p>
+                </div>
+                <div class="about-col-2">
+                    <h3>Certification</h3>
+                    <p>Web Development</p>
+                    <p>2019-2020</p>
+                </div>
+                <div class="about-col-3">
+                    <h3>Experience</h3>
+                    <p>Trainee Software Engineer</p>
+                    <p>2020-Present</p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="section">
+                <div class="title skills-title">
+                    <h1>SKILLS</h1>
+                </div>
+                <div class="skills-col-1">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skills-col-2">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skills-col-3">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skills-col-4">
+                    <h3>Bootstrap</h3>
+                </div>
+                <div class="skills-col-5">
+                    <h3>Angular</h3>
+                </div>
+                <div class="skills-col-6">
+                    <h3>Wordpress</h3>
+                </div>
+                <div class="skills-col-7">
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skills-col-8">
+                    <h3>PHP</h3>
+                </div>
+                <div class="skills-col-9">
+                    <h3>Laravel</h3>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section">
+                <div class="title contact-title">
+                    <h1>CONTACT</h1>
+                </div>
+                <div class="contact-col-1">
+                    <a href="mailto:nunes.conrad93@gmail.com">
+                        <i class="far fa-envelope icon tooltip">
+                            <span class="tooltip-text">Email</span>
+                        </i>
                     </a>
                 </div>
-            </nav>
-        </header>
+                <div class="contact-col-2">
+                    <a href="https://www.youtube.com/channel/UCDyi992niPoY7iA8kV9Fo8g" target="_blank">
+                        <i class="fab fa-youtube icon tooltip">
+                            <span class="tooltip-text">Youtube</span>
+                        </i>
+                    </a>
+                </div>
+                <div class="contact-col-3">                
+                    <a href="https://github.com/conrad93" target="_blank">
+                        <i class="fab fa-github icon tooltip">
+                            <span class="tooltip-text">Github</span>
+                        </i>
+                    </a>
+                </div>
+                <div class="contact-col-4">
+                    <a href="https://www.linkedin.com/in/conrad93/" target="_blank">
+                        <i class="fab fa-linkedin-in icon tooltip">
+                            <span class="tooltip-text">Linkedin</span>
+                        </i>
+                    </a>
+                </div>
+            </section>
 
-        <!-- Fixed navbar therefore spacer -->
-        <div class="spacer"></div>
+            <!-- Footer -->
+            <footer>
+                <p>@March-2021, made with &#10084;</p>
+                <p class="tooltip">
+                    <span class="tooltip-text">Page top.</span>
+                    <a href="javascript:void(0)" onclick="pageNav('top')">
+                        <i class="fas fa-hashtag icon"></i>
+                    </a>
+                </p>
+            </footer>
 
-        <!-- Home -->
-        <section id="home">
-            <div class="home-title">
-                <h1>
-                    I'm Conrad,
-                    <br>
-                    Web Developer.
-                </h1>
-                <button class="tooltip">
-                    <span class="tooltip-text">Download resume.</span>
-                    <a href="assets/documents/White and Black Minimalist Resume.pdf" download="conrad-resume">Resume</a>
-                </button>
-            </div>
-            <div class="face">
-                <div class="eyes left-eye"></div>
-                <div class="eyes right-eye"></div>
-                <div class="lips"></div>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section">
-            <div class="title about-title">
-                <h1>ABOUT</h1>
-            </div>
-            <div class="about-col-1">
-                <h3>Education</h3>
-                <p>Bachelor of Science in <br> Information Technology</p>
-                <p>2016-2019</p>
-            </div>
-            <div class="about-col-2">
-                <h3>Certification</h3>
-                <p>Web Development</p>
-                <p>2019-2020</p>
-            </div>
-            <div class="about-col-3">
-                <h3>Experience</h3>
-                <p>Trainee Software Engineer</p>
-                <p>2020-Present</p>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="section">
-            <div class="title skills-title">
-                <h1>SKILLS</h1>
-            </div>
-            <div class="skills-col-1">
-                <h3>HTML</h3>
-            </div>
-            <div class="skills-col-2">
-                <h3>CSS</h3>
-            </div>
-            <div class="skills-col-3">
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skills-col-4">
-                <h3>Bootstrap</h3>
-            </div>
-            <div class="skills-col-5">
-                <h3>Angular</h3>
-            </div>
-            <div class="skills-col-6">
-                <h3>Wordpress</h3>
-            </div>
-            <div class="skills-col-7">
-                <h3>Node.js</h3>
-            </div>
-            <div class="skills-col-8">
-                <h3>PHP</h3>
-            </div>
-            <div class="skills-col-9">
-                <h3>Laravel</h3>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section">
-            <div class="title contact-title">
-                <h1>CONTACT</h1>
-            </div>
-            <div class="contact-col-1">
-                <a href="mailto:nunes.conrad93@gmail.com">
-                    <i class="far fa-envelope icon tooltip">
-                        <span class="tooltip-text">Email</span>
-                    </i>
-                </a>
-            </div>
-            <div class="contact-col-2">
-                <a href="https://www.youtube.com/channel/UCDyi992niPoY7iA8kV9Fo8g" target="_blank">
-                    <i class="fab fa-youtube icon tooltip">
-                        <span class="tooltip-text">Youtube</span>
-                    </i>
-                </a>
-            </div>
-            <div class="contact-col-3">                
-                <a href="https://github.com/conrad93" target="_blank">
-                    <i class="fab fa-github icon tooltip">
-                        <span class="tooltip-text">Github</span>
-                    </i>
-                </a>
-            </div>
-            <div class="contact-col-4">
-                <a href="https://www.linkedin.com/in/conrad93/" target="_blank">
-                    <i class="fab fa-linkedin-in icon tooltip">
-                        <span class="tooltip-text">Linkedin</span>
-                    </i>
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>@March-2021, made with &#10084;</p>
-            <p class="tooltip">
-                <span class="tooltip-text">Page top.</span>
-                <a href="javascript:void(0)" onclick="pageNav('top')">
-                    <i class="fas fa-hashtag icon"></i>
-                </a>
-            </p>
-        </footer>
+        </div>
 
         <!-- Scripts -->
         <script src="https://kit.fontawesome.com/e1949be7bd.js" crossorigin="anonymous"></script>
