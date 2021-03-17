@@ -57,7 +57,7 @@ function loaderFunction() {
         setTimeout(() => {
             main[0].style.opacity = 1;
         }, 50);        
-    }, 2000);
+    }, 500);
 }
 
 window.addEventListener('load', loaderFunction);

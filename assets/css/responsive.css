@@ -1,3 +1,8 @@
+@media screen and (max-width: 1024px) {
+    .active{
+        color: var(--textColor) !important;
+    }
+}
 @media screen and (max-width: 900px) {
     h3{
         font-size: 20px;
@@ -12,19 +17,18 @@
         font-size: 20px;
     }
     .navbar{
-        padding: 15px 0px;
+        padding: 5px 0px;
+        flex-direction: column;
+        align-items: center;
     }
     .navbar a{
-        padding: 0px 5px;
-    }
-    .active{
-        color: var(--textColor) !important;
+        padding: 5px;
     }
     .navbar-logo{
-        margin-left: 10%;
+        margin-left: 0%;
     }
     .navbar-item{
-        margin-right: 10%;
+        margin-right: 0%;
     }
     #home{
         margin: 100px 10% 0px 10%;
@@ -53,5 +57,78 @@
     }
     .tooltip-text{
         font-size: 14px;
+    }
+    .tooltip .tooltip-text{
+        width: 75px;
+        left: 40%;
+        margin-left: -40px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .navbar-logo{
+        font-size: 20px;
+    }
+    .navbar-item{
+        font-size: 14px;
+    }
+    .switch-slider{
+        height: 10px;
+        width: 10px;
+    }
+    #home{
+        margin: 50px 10% 0px 10%;
+    }
+    .section{
+        margin: 50px 10% 0px 10%;;
+    }
+    #about{
+        grid-template-columns: 1fr;
+        grid-template-areas: "about-title" "about-col-1" "about-col-2" "about-col-3";
+    }
+    #skills{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "skills-title skills-title" "skills-col-1 skills-col-2" "skills-col-3 skills-col-4" "skills-col-5 skills-col-6" "skills-col-7 skills-col-8" "skills-col-9 .";
+    }
+    #contact{
+        padding: 0px 25px 25px 25px;
+    }
+    footer{
+        margin: 50px 10% 0px 10%;
+    }
+    .tooltip .tooltip-text{
+        display: none;
+    }
+}
+@media screen and (max-width: 250px) {
+    h3{
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .icon{
+        font-size: 16px;
+    }
+    .navbar-logo{
+        font-size: 16px;
+    }
+    .navbar-item{
+        font-size: 12px;
+    }
+    .switch-slider{
+        height: 8px;
+        width: 8px;
+    }
+    .switch-input:checked + .switch-slider{
+        transform: translateX(10px);
+    }
+    .home-title h1{
+        font-size: 24px;
+    }
+    .home-title button a{
+        font-size: 12px;
     }
 }
