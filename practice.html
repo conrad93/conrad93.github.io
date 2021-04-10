@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                background-color: #393e46;
+            }
+            .main{
+            }
+            p{
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .section{
+                margin: 150px 125px 0px 125px;
+                background-color: #222831;
+                color: #eeeeee;
+                text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 8px;
+                text-align: center;
+                transition: background-color 0.5s, color 1s;
+                position: relative;
+            }
+            .title{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                text-shadow: none;
+                opacity: 0.25;
+                transform: translate(-50%, -50%);
+                font-size: 72px;
+                font-weight: 600;
+            }
+            #about{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: "about-col-1 about-col-2 about-col-3";
+                justify-items: center;
+                padding: 0px 5px 5px 5px;
+            }
+            .about-col-1{
+                grid-area: about-col-1;
+                padding: 10px;
+            }
+            .about-col-2{
+                grid-area: about-col-2;
+                padding: 10px;
+            }
+            .about-col-3{
+                grid-area: about-col-3;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main dark-theme">
+            <section id="about" class="section">
+                <div class="title about-title">
+                    <h1>ABOUT</h1>
+                </div>
+                <div class="about-col-1">
+                    <h3>Education</h3>
+                    <p>Bachelor of Science in <br> Information Technology</p>
+                    <p>2016-2019</p>
+                </div>
+                <div class="about-col-2">
+                    <h3>Certification</h3>
+                    <p>Web Development</p>
+                    <p>2019-2020</p>
+                </div>
+                <div class="about-col-3">
+                    <h3>Experience</h3>
+                    <p>Trainee Software Engineer</p>
+                    <p>2020-Present</p>
+                </div>
+            </section>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

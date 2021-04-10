@@ -33,7 +33,7 @@ body{
     display: none;
     opacity: 0;
     background-color: var(--secondaryColor);
-    transition: opacity 0.5s ease-in, background-color 0.5s;
+    transition: opacity 1s ease-in, background-color 0.5s;
 }
 h3{
     font-size: 24px;
@@ -154,21 +154,26 @@ header{
     border-radius: 8px;
     text-align: center;
     transition: background-color 0.5s, color 1s;
+    position: relative;
 }
 .title{
-    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    text-shadow: none;
+    opacity: 0.25;
+    transform: translate(-50%, -50%);
+    font-size: 72px;
     font-weight: 600;
 }
 #about{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "about-title about-title about-title" "about-col-1 about-col-2 about-col-3";
+    grid-template-areas: "about-col-1 about-col-2 about-col-3";
     justify-items: center;
     padding: 0px 5px 5px 5px;
-}
-.about-title{
-    grid-area: about-title;
 }
 .about-col-1{
     grid-area: about-col-1;
@@ -186,12 +191,9 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "skills-title skills-title skills-title" "skills-col-1 skills-col-2 skills-col-3" "skills-col-4 skills-col-5 skills-col-6" "skills-col-7 skills-col-8 skills-col-9";
+    grid-template-areas: "skills-col-1 skills-col-2 skills-col-3" "skills-col-4 skills-col-5 skills-col-6" "skills-col-7 skills-col-8 skills-col-9";
     justify-items: center;
     padding: 0px 5px 5px 5px;
-}
-.skills-title{
-    grid-area: skills-title;
 }
 .skills-col-1{
     grid-area: skills-col-1;
@@ -230,12 +232,9 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "contact-title contact-title contact-title contact-title" "contact-col-1 contact-col-2 contact-col-3 contact-col-4";
+    grid-template-areas: "contact-col-1 contact-col-2 contact-col-3 contact-col-4";
     justify-items: center;
-    padding: 0px 50px 50px 50px;
-}
-.contact-title{
-    grid-area: contact-title;
+    padding: 50px;
 }
 .contact-col-1{
     grid-area: contact-col-1;
@@ -351,11 +350,40 @@ footer{
     border-color: var(--infoDark) transparent var(--infoLight) transparent;
     animation: loading-spinner 1.2s linear infinite;
 }
+.neon-lights{
+    font-family: 'Bad Script', cursive;
+    font-weight: normal;
+    color: rgb(255,255,255);
+    animation: neon-lights 10s linear infinite;
+}
 @keyframes loading-spinner{
     0% {
         transform: rotate(0deg);
     } 
     100% {
         transform: rotate(360deg);
+    }
+}
+@keyframes neon-lights{
+    100%,0%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,0,0), 0 0 0.4em rgb(255,0,0), 0 0 0.6em rgb(255,0,0), 0 0 0.8em rgb(255,0,0);
+    }
+    14%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,127,0), 0 0 0.4em rgb(255,127,0), 0 0 0.6em rgb(255,127,0), 0 0 0.8em rgb(255,127,0);
+    }
+    28%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,255,0), 0 0 0.4em rgb(255,255,0), 0 0 0.6em rgb(255,255,0), 0 0 0.8em rgb(255,255,0);
+    }
+    42%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(0,255,0), 0 0 0.4em rgb(0,255,0), 0 0 0.6em rgb(0,255,0), 0 0 0.8em rgb(0,255,0);
+    }
+    56%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(0,0,255), 0 0 0.4em rgb(0,0,255), 0 0 0.6em rgb(0,0,255), 0 0 0.8em rgb(0,0,255);
+    }
+    70%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(75,0,130), 0 0 0.4em rgb(75,0,130), 0 0 0.6em rgb(75,0,130), 0 0 0.8em rgb(75,0,130);
+    }
+    84%{
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(148,0,211), 0 0 0.4em rgb(148,0,211), 0 0 0.6em rgb(148,0,211), 0 0 0.8em rgb(148,0,211);
     }
 }

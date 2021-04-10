@@ -25,19 +25,19 @@ function pageNav(id) {
 
 window.addEventListener("scroll", () => {
     var pageYOffset = window.pageYOffset;
-    if ((about.offsetTop - 175) <= pageYOffset && (skills.offsetTop - 175) > pageYOffset) {
+    if ((about.offsetTop - 150) <= pageYOffset && (skills.offsetTop - 150) > pageYOffset) {
         navbarItem[0].children[0].classList.add("active");
         navbarItem[0].children[1].classList.remove("active");
         navbarItem[0].children[2].classList.remove("active");
-    } else if ((skills.offsetTop - 175) <= pageYOffset && (contact.offsetTop - contact.offsetHeight - 35) > pageYOffset) {
+    } else if ((skills.offsetTop - 150) <= pageYOffset && (contact.offsetTop - contact.offsetHeight - 127) > pageYOffset) {
         navbarItem[0].children[0].classList.remove("active");
         navbarItem[0].children[1].classList.add("active");
         navbarItem[0].children[2].classList.remove("active");
-    } else if ((contact.offsetTop - contact.offsetHeight - 35) <= pageYOffset) {
+    } else if ((contact.offsetTop - contact.offsetHeight - 127) <= pageYOffset) {
         navbarItem[0].children[0].classList.remove("active");
         navbarItem[0].children[1].classList.remove("active");
         navbarItem[0].children[2].classList.add("active");
-    } else if ((about.offsetTop - 175) > pageYOffset) {
+    } else if ((about.offsetTop - 150) > pageYOffset) {
         navbarItem[0].children[0].classList.remove("active");
         navbarItem[0].children[1].classList.remove("active");
         navbarItem[0].children[2].classList.remove("active");
