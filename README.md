@@ -5,4 +5,4 @@
 ## Resources
 1. fontawesome
 2. google fonts
-3. favicon.io || favicon.cc
+3. favicon.cc

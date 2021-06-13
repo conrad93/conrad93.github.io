@@ -38,19 +38,15 @@ body{
 h3{
     font-size: 24px;
     font-weight: 500;
+    border-bottom: 1px solid var(--textColor);
+    color: var(--textColor);
+    margin: 16px 0px;
+    padding: 5px;
+    transition: border-bottom 0.5s, color 1s;
 }
 p{
     font-size: 16px;
     font-weight: 500;
-}
-header{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-.spacer{
-    height: 60px;
 }
 .navbar{
     background-color: var(--primaryColor);
@@ -60,30 +56,28 @@ header{
     box-shadow: var(--shadow);
     transition: background-color 0.5s;
 }
-.navbar a{
-    text-decoration: none;
+.navbar-logo{
+    margin-left: 10%;
+    font-size: 24px;
+    font-weight: 700;
     color: var(--textColor);
-    padding-left: 15px;
-    padding-right: 15px;
     transition: color 1s;
 }
-.active{
-    color: var(--lightColor) !important;
-}
-.navbar-logo{
-    margin-left: 95px;
-    font-size: 24px;
-}
 .navbar-item{
-    margin-right: 95px;
-    font-size: 16px;
+    margin-right: 10%;
     display: flex;
     align-items: center;
 }
+.section{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #home{
-    margin: 150px 125px 0px 125px;
     display: flex;
     justify-content: space-between;
+    width: 80%;
 }
 .home-title h1{
     color: var(--textColor);
@@ -119,7 +113,7 @@ header{
     transition: background-color 0.5s;
 }
 .eyes{
-    background-color: var(--primaryColor);
+    background-color: var(--textColor);
     width:40px;
     height:40px;
     border-radius: 50%;
@@ -137,7 +131,7 @@ header{
     width: 150px;
     height: 150px;
     border: 15px solid transparent;
-    border-bottom: 15px solid var(--primaryColor);
+    border-bottom: 15px solid var(--textColor);
     border-radius: 50%;
     position: absolute;
     bottom: 20%;
@@ -145,8 +139,16 @@ header{
     transform: translateX(-50%);
     transition: border-bottom 0.5s;
 }
-.section{
-    margin: 150px 125px 0px 125px;
+#about{
+    width: 80%;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+.about-item{
     background-color: var(--primaryColor);
     color: var(--textColor);
     text-shadow: var(--shadow);
@@ -154,106 +156,62 @@ header{
     border-radius: 8px;
     text-align: center;
     transition: background-color 0.5s, color 1s;
-    position: relative;
-}
-.title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 0;
-    text-shadow: none;
-    opacity: 0.25;
-    transform: translate(-50%, -50%);
-    font-size: 72px;
-    font-weight: 600;
-}
-#about{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "about-col-1 about-col-2 about-col-3";
-    justify-items: center;
-    padding: 0px 5px 5px 5px;
-}
-.about-col-1{
-    grid-area: about-col-1;
     padding: 10px;
 }
-.about-col-2{
-    grid-area: about-col-2;
-    padding: 10px;
+.skills-content{
+    display: flex;
+    justify-content: space-around;
 }
-.about-col-3{
-    grid-area: about-col-3;
-    padding: 10px;
-}
-#skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "skills-col-1 skills-col-2 skills-col-3" "skills-col-4 skills-col-5 skills-col-6" "skills-col-7 skills-col-8 skills-col-9";
-    justify-items: center;
-    padding: 0px 5px 5px 5px;
-}
-.skills-col-1{
-    grid-area: skills-col-1;
-}
-.skills-col-2{
-    grid-area: skills-col-2;
-}
-.skills-col-3{
-    grid-area: skills-col-3;
-}
-.skills-col-4{
-    grid-area: skills-col-4;
-}
-.skills-col-5{
-    grid-area: skills-col-5;
-}
-.skills-col-6{
-    grid-area: skills-col-6;
-}
-.skills-col-7{
-    grid-area: skills-col-7;
-}
-.skills-col-8{
-    grid-area: skills-col-8;
-}
-.skills-col-9{
-    grid-area: skills-col-9;
-}
-.icon{
-    font-size: 36px;
-    color: var(--textColor);
-    cursor: pointer;
-    transition: color 1s;
+.skills-content ul{
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
 }
 #contact{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "contact-col-1 contact-col-2 contact-col-3 contact-col-4";
-    justify-items: center;
-    padding: 50px;
+    width: 30%
 }
-.contact-col-1{
-    grid-area: contact-col-1;
-    padding: 10px;
+#contactForm h3{
+    text-align: center;
+    text-shadow: var(--shadow);
 }
-.contact-col-2{
-    grid-area: contact-col-2;
-    padding: 10px;
+#contactForm label{
+    text-shadow: var(--shadow);
+    color: var(--textColor);
+    transition: color 1s;
 }
-.contact-col-3{
-    grid-area: contact-col-3;
-    padding: 10px;
+#contactForm input[type=text], input[type=email], textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: var(--textColor);
+    background-color: var(--primaryColor);
+    box-shadow: var(--shadow);
+    transition: background-color 0.5s, color 1s;
 }
-.contact-col-4{
-    grid-area: contact-col-4;
-    padding: 10px;
+#contactForm input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    border: 1px solid var(--lightColor);
+    outline: none;
+}
+#contactForm input[type=submit], input[type=reset] {
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    padding: 16px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background-color 0.5s, color 1s;
+}
+#contactForm input[type=submit]:hover, input[type=reset]:hover {
+    background-color: var(--lightColor);
 }
 footer{
-    margin: 150px 125px 0px 125px;
+    margin: 0% 10%;
     color: var(--textColor);
     text-shadow: var(--shadow);
     display: flex;
@@ -261,8 +219,17 @@ footer{
     align-items: center;
     transition: color 1s;
 }
+.footer-icon a{
+    font-size: 24px;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: var(--textColor);
+    text-shadow: var(--shadow);
+    transition: color 1s;
+}
 .tooltip{
     position: relative;
+    display: inline-block;
 }
 .tooltip-text{
     font-size: 16px;
@@ -271,7 +238,7 @@ footer{
 }
 .tooltip .tooltip-text{
     visibility: hidden;
-    width: 100px;
+    width: 120px;
     background-color: var(--textColor);
     color: var(--primaryColor);
     text-align: center;
@@ -279,21 +246,19 @@ footer{
     padding: 5px;
     position: absolute;
     z-index: 2;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -50px;
+    top: 0px;
+    left: 110%;
     opacity: 0;
     transition: opacity 1s, background-color 0.5s, color 1s;
 }
 .tooltip .tooltip-text::after{
     content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
+    right: 100%;
+    top: 40%;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--textColor) transparent transparent transparent;
+    border-color: transparent var(--textColor) transparent transparent;
 }
 .tooltip:hover .tooltip-text{
     visibility: visible;
@@ -366,24 +331,24 @@ footer{
 }
 @keyframes neon-lights{
     100%,0%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,0,0), 0 0 0.4em rgb(255,0,0), 0 0 0.6em rgb(255,0,0), 0 0 0.8em rgb(255,0,0);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,0,0), 0 0 0.3em rgb(255,0,0), 0 0 0.4em rgb(255,0,0), 0 0 0.6em rgb(255,0,0);
     }
     14%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,127,0), 0 0 0.4em rgb(255,127,0), 0 0 0.6em rgb(255,127,0), 0 0 0.8em rgb(255,127,0);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,127,0), 0 0 0.3em rgb(255,127,0), 0 0 0.4em rgb(255,127,0), 0 0 0.6em rgb(255,127,0);
     }
     28%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(255,255,0), 0 0 0.4em rgb(255,255,0), 0 0 0.6em rgb(255,255,0), 0 0 0.8em rgb(255,255,0);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,0), 0 0 0.3em rgb(255,255,0), 0 0 0.4em rgb(255,255,0), 0 0 0.6em rgb(255,255,0);
     }
     42%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(0,255,0), 0 0 0.4em rgb(0,255,0), 0 0 0.6em rgb(0,255,0), 0 0 0.8em rgb(0,255,0);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(0,255,0), 0 0 0.3em rgb(0,255,0), 0 0 0.4em rgb(0,255,0), 0 0 0.6em rgb(0,255,0);
     }
     56%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(0,0,255), 0 0 0.4em rgb(0,0,255), 0 0 0.6em rgb(0,0,255), 0 0 0.8em rgb(0,0,255);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(0,0,255), 0 0 0.3em rgb(0,0,255), 0 0 0.4em rgb(0,0,255), 0 0 0.6em rgb(0,0,255);
     }
     70%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(75,0,130), 0 0 0.4em rgb(75,0,130), 0 0 0.6em rgb(75,0,130), 0 0 0.8em rgb(75,0,130);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(75,0,130), 0 0 0.3em rgb(75,0,130), 0 0 0.4em rgb(75,0,130), 0 0 0.6em rgb(75,0,130);
     }
     84%{
-        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(255,255,255), 0 0 0.3em rgb(148,0,211), 0 0 0.4em rgb(148,0,211), 0 0 0.6em rgb(148,0,211), 0 0 0.8em rgb(148,0,211);
+        text-shadow: 0 0 0.1em rgb(255,255,255), 0 0 0.2em rgb(148,0,211), 0 0 0.3em rgb(148,0,211), 0 0 0.4em rgb(148,0,211), 0 0 0.6em rgb(148,0,211);
     }
 }

@@ -1,6 +1,10 @@
 @media screen and (max-width: 1024px) {
-    .active{
-        color: var(--textColor) !important;
+    .section{
+        height: auto;
+        margin: 20% 0%;
+    }
+    #contact{
+        width: 50%
     }
 }
 @media screen and (max-width: 900px) {
@@ -14,21 +18,10 @@
         font-size: 20px;
     }
     .navbar{
-        padding: 5px 0px;
-        flex-direction: column;
-        align-items: center;
+        padding: 10px 15px;
     }
-    .navbar a{
-        padding: 5px;
-    }
-    .navbar-logo{
-        margin-left: 0%;
-    }
-    .navbar-item{
-        margin-right: 0%;
-    }
-    #home{
-        margin: 100px 10% 0px 10%;
+    .section{
+        margin: 15% 0%;
     }
     .face{
         display: none;
@@ -42,79 +35,67 @@
     .home-title button a{
         font-size: 14px;
     }
-    .section{
-        margin: 100px 10% 0px 10%;;
-        position: static;
-    }
-    .title{
-        position: static;
-        text-shadow: var(--shadow);
-        opacity: 1;
-        transform: none;
-        font-size: 20px;
-    }
-    #about{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "about-title about-title" "about-col-1 about-col-2" "about-col-3 .";
-    }
-    .about-title{
-        grid-area: about-title;
-    }
-    #skills{
-        grid-template-areas: "skills-title skills-title skills-title" "skills-col-1 skills-col-2 skills-col-3" "skills-col-4 skills-col-5 skills-col-6" "skills-col-7 skills-col-8 skills-col-9";
-    }
-    .skills-title{
-        grid-area: skills-title;
+    .about-container{
+        grid-template-columns: auto auto;
     }
     #contact{
-        grid-template-areas: "contact-title contact-title contact-title contact-title" "contact-col-1 contact-col-2 contact-col-3 contact-col-4";
-        padding: 0 50px 50px 50px;
+        width: 60%
     }
-    .contact-title{
-        grid-area: contact-title;
+    #contactForm input[type=submit], input[type=reset] {
+        padding: 10px 20px;
     }
-    footer{
-        margin: 100px 10% 0px 10%;
+    .footer-icon a{
+        font-size: 20px;
     }
     .tooltip-text{
         font-size: 14px;
     }
-    .tooltip .tooltip-text{
-        width: 75px;
-        left: 40%;
-        margin-left: -40px;
+}
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding: 5px 10px;
+    }
+    .navbar-logo{
+        margin-left: 5%;
+    }
+    .navbar-item{
+        margin-right: 5%;
+    }
+    #home{
+        width: 90%
+    }
+    #about{
+        width: 90%
+    }
+    .about-container{
+        grid-template-columns: auto;
+    }
+    #contact{
+        width: 70%
+    }
+    footer{
+        margin: 0% 5%;
+        flex-direction: column;
+    }
+    .footer-icon{
+        padding: 10px;
     }
 }
 @media screen and (max-width: 350px) {
     .navbar-logo{
         font-size: 20px;
     }
-    .navbar-item{
-        font-size: 14px;
-    }
-    .switch-slider{
-        height: 10px;
-        width: 10px;
-    }
-    #home{
-        margin: 50px 10% 0px 10%;
-    }
     .section{
-        margin: 50px 10% 0px 10%;;
-    }
-    #about{
-        grid-template-columns: 1fr;
-        grid-template-areas: "about-title" "about-col-1" "about-col-2" "about-col-3";
-    }
-    #skills{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "skills-title skills-title" "skills-col-1 skills-col-2" "skills-col-3 skills-col-4" "skills-col-5 skills-col-6" "skills-col-7 skills-col-8" "skills-col-9 .";
+        margin: 10% 0%;
     }
     #contact{
-        padding: 0px 25px 25px 25px;
+        width: 75%
     }
     footer{
-        margin: 50px 10% 0px 10%;
+        flex-direction: column;
+    }
+    .footer-icon{
+        padding: 10px;
     }
     .tooltip .tooltip-text{
         display: none;
@@ -127,17 +108,12 @@
     p{
         font-size: 12px;
     }
-    .title{
-        font-size: 16px;
-    }
-    .icon{
-        font-size: 16px;
-    }
     .navbar-logo{
         font-size: 16px;
     }
-    .navbar-item{
-        font-size: 12px;
+    .switch{
+        display: flex;
+        padding: 5px;
     }
     .switch-slider{
         height: 8px;
@@ -149,7 +125,16 @@
     .home-title h1{
         font-size: 24px;
     }
+    .home-title button{
+        padding: 8px 20px;
+    }
     .home-title button a{
         font-size: 12px;
+    }
+    #contact{
+        width: 80%
+    }
+    #contactForm input[type=submit], input[type=reset] {
+        padding: 8px 16px;
     }
 }
