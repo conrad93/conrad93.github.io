@@ -301,19 +301,30 @@ footer{
     top: 0;
     left: 0;
     z-index: 3;
-    background: var(--primaryDark);
-}
-.loader h1{
-    color: var(--primaryLight);
 }
 .loading-spinner{
-    width: 64px;
-    height: 64px;
-    margin: 8px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 6px solid transparent;
-    border-color: var(--infoDark) transparent var(--infoLight) transparent;
-    animation: loading-spinner 1.2s linear infinite;
+    border: 6px double;
+    border-color: rgb(255,0,0) rgb(255,192,192) rgb(255,0,0) rgb(255,192,192);
+    animation: loading-spinner 1.5s linear infinite;
+}
+.mid-loading-spinner{
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 6px double;
+    border-color: rgb(0,255,0) rgb(192,255,192) rgb(0,255,0) rgb(192,255,192);
+}
+.inner-loading-spinner{
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    border-radius: 50%;
+    border: 6px double;
+    border-color: rgb(0,0,255) rgb(192,192,255) rgb(0,0,255) rgb(192,192,255);
 }
 .neon-lights{
     font-family: 'Bad Script', cursive;
