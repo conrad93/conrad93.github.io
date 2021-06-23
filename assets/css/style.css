@@ -38,11 +38,10 @@ body{
 h3{
     font-size: 24px;
     font-weight: 500;
-    border-bottom: 1px solid var(--textColor);
     color: var(--textColor);
     margin: 16px 0px;
     padding: 5px;
-    transition: border-bottom 0.5s, color 1s;
+    transition: color 1s;
 }
 p{
     font-size: 16px;
@@ -146,14 +145,15 @@ p{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
 .about-item{
     background-color: var(--primaryColor);
     color: var(--textColor);
     text-shadow: var(--shadow);
     box-shadow: var(--shadow);
-    border-radius: 8px;
+    border-radius: 0px 8px 8px 0px;
+    border-left: 4px solid var(--lightColor);
     text-align: center;
     transition: background-color 0.5s, color 1s;
     padding: 10px;
@@ -168,47 +168,60 @@ p{
     padding: 0px;
 }
 #contact{
-    width: 30%
+    width: 30%;
+    background-image: linear-gradient(135deg,red,orange,yellow,green,blue,indigo,violet);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+#contactForm{
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.25);
+    padding: 1em;
+    transition: all 0.5s;
 }
 #contactForm h3{
+    color: #fff;
+    opacity: 0.7;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
     text-align: center;
-    text-shadow: var(--shadow);
-}
-#contactForm label{
-    text-shadow: var(--shadow);
-    color: var(--textColor);
-    transition: color 1s;
+    transition: all 0.5s;
 }
 #contactForm input[type=text], input[type=email], textarea{
     width: 100%;
-    padding: 12px;
-    border-radius: 4px;
-    border: none;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 10px;
     box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    color: var(--textColor);
-    background-color: var(--primaryColor);
-    box-shadow: var(--shadow);
-    transition: background-color 0.5s, color 1s;
 }
 #contactForm input[type=text]:focus, input[type=email]:focus, textarea:focus{
-    border: 1px solid var(--lightColor);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.25);
     outline: none;
 }
 #contactForm input[type=submit], input[type=reset] {
-    background-color: var(--primaryColor);
-    color: var(--textColor);
     padding: 16px 30px;
-    border: none;
+    margin-bottom: 1em;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: var(--shadow);
-    transition: background-color 0.5s, color 1s;
 }
-#contactForm input[type=submit]:hover, input[type=reset]:hover {
-    background-color: var(--lightColor);
+.inputGlass{
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.25);
+    color: #fff;
+    transition: all 0.5s;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+}
+.inputGlass:hover{
+    background: rgba(255,255,255,0.1) !important;
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.25);
 }
 footer{
     margin: 0% 10%;
@@ -226,6 +239,9 @@ footer{
     color: var(--textColor);
     text-shadow: var(--shadow);
     transition: color 1s;
+}
+.footer-icon a:hover{
+    color: var(--lightColor);
 }
 .tooltip{
     position: relative;
