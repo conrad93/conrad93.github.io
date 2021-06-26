@@ -28,6 +28,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    cursor: none;
 }
 .main{
     display: none;
@@ -347,6 +348,36 @@ footer{
     font-weight: normal;
     color: rgb(255,255,255);
     animation: neon-lights 10s linear infinite;
+}
+.cursor{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    display: none;
+}
+#cursor1{
+    border: 2px solid #0000ff;
+    transition: 0.15s;
+}
+#cursor2{
+    border: 2px solid #00ffff;
+    transition: 0.12s;
+}
+#cursor3{
+    border: 2px solid #00ff00;
+    transition: 0.09s;
+}
+#cursor4{
+    border: 2px solid #ffff00;
+    transition: 0.06s;
+}
+#cursor5{
+    border: 2px solid #ff0000;
+    transition: 0.03s;
 }
 @keyframes loading-spinner{
     0% {
