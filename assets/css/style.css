@@ -95,6 +95,7 @@ p{
     padding: 14px 40px;
     margin-top: 15px;
     transition: background-color 0.5s;
+    cursor: none;
 }
 .home-title button a{
     font-size: 16px;
@@ -102,6 +103,7 @@ p{
     color: var(--textColor);
     text-decoration: none;
     transition: color 1s;
+    cursor: none;
 }
 .face{
     box-shadow: var(--shadow);
@@ -197,6 +199,7 @@ p{
     margin-bottom: 2em;
     border-radius: 10px;
     box-sizing: border-box;
+    cursor: none;
 }
 #contactForm input[type=text]:focus, input[type=email]:focus, textarea:focus{
     background: rgba(255,255,255,0.1);
@@ -207,7 +210,7 @@ p{
     padding: 16px 30px;
     margin-bottom: 1em;
     border-radius: 6px;
-    cursor: pointer;
+    cursor: none;
 }
 .inputGlass{
     background: transparent;
@@ -240,6 +243,7 @@ footer{
     color: var(--textColor);
     text-shadow: var(--shadow);
     transition: color 1s;
+    cursor: none;
 }
 .footer-icon a:hover{
     color: var(--lightColor);
@@ -288,8 +292,7 @@ footer{
     border: 1px solid var(--textColor);
     padding: 0 5px;
     box-sizing: border-box;
-    cursor: pointer;
-    background-color: var(--primaryColor);
+    cursor: none;
     box-shadow: var(--shadow);
     transition: background-color 0.5s, border 1s;
 }
@@ -298,7 +301,7 @@ footer{
 }
 .switch-slider{
     background-color: var(--lightColor);
-    transition: 0.5s;
+    transition: all 0.5s;
     border-radius: 34px;
     height: 12px;
     width: 12px;
@@ -353,31 +356,45 @@ footer{
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 999;
-    width: 20px;
-    height: 20px;
     border-radius: 50%;
     pointer-events: none;
     display: none;
 }
 #cursor1{
-    border: 2px solid #0000ff;
-    transition: 0.15s;
+    border: 2px solid #ff00ff;
+    transition: 0.17s;
+    width: 5px;
+    height: 5px;
 }
 #cursor2{
-    border: 2px solid #00ffff;
-    transition: 0.12s;
+    border: 2px solid #0000ff;
+    transition: 0.13s;
+    width: 8px;
+    height: 8px;
 }
 #cursor3{
-    border: 2px solid #00ff00;
-    transition: 0.09s;
+    border: 2px solid #00ffff;
+    transition: 0.10s;
+    width: 11px;
+    height: 11px;
 }
 #cursor4{
-    border: 2px solid #ffff00;
-    transition: 0.06s;
+    border: 2px solid #00ff00;
+    transition: 0.07s;
+    width: 14px;
+    height: 14px;
 }
 #cursor5{
+    border: 2px solid #ffff00;
+    transition: 0.04s;
+    width: 17px;
+    height: 17px;
+}
+#cursor6{
     border: 2px solid #ff0000;
-    transition: 0.03s;
+    transition: 0.01s;
+    width: 20px;
+    height: 20px;
 }
 @keyframes loading-spinner{
     0% {
