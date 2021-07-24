@@ -69,7 +69,8 @@ p{
     align-items: center;
 }
 .section{
-    height: 90vh;
+    height: auto;
+    margin: 12.5% 0% 0% 0%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,44 +145,61 @@ p{
 #about{
     width: 80%;
 }
-.about-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-gap: 15px;
+.tab {
+    overflow: hidden;
 }
-.about-item{
+.tab button {
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    float: left;
+    border: none;
+    border-radius: 8px 8px 0px 0px;
+    cursor: none;
+    padding: 14px 16px;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+.tab button:hover {
+    background-color: var(--lightColor);
+}
+.tab button.active {
+    background-color: var(--primaryColor);
+    transition: background-color 0.5s;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-radius: 0px 0px 8px 8px;
+    border-bottom: 5px solid var(--lightColor);
     background-color: var(--primaryColor);
     color: var(--textColor);
-    text-shadow: var(--shadow);
-    box-shadow: var(--shadow);
-    border-radius: 0px 8px 8px 0px;
-    border-left: 4px solid var(--lightColor);
-    text-align: center;
     transition: background-color 0.5s, color 1s;
-    padding: 10px;
 }
-.skills-content{
+.skills-container{
     display: flex;
-    justify-content: space-around;
 }
-.skills-content ul{
+.skills-ul{
+    margin: 0px 20px 20px 30px;
+}
+.skills-ul ul{
     text-align: left;
     margin: 0px;
     padding: 0px;
 }
 #contact{
-    width: 30%;
     background-image: linear-gradient(135deg,red,orange,yellow,green,blue,indigo,violet);
-    padding: 0.5em;
-    border-radius: 10px;
 }
 #contactForm{
+    margin: 10px 0px;
+    width: 30%;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
+    -ms-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.25);
     padding: 1em;
     transition: all 0.5s;
@@ -218,6 +236,9 @@ p{
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.25);
     color: #fff;
     transition: all 0.5s;
@@ -326,25 +347,27 @@ footer{
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 6px double;
-    border-color: rgb(255,0,0) rgb(255,192,192) rgb(255,0,0) rgb(255,192,192);
-    animation: loading-spinner 1.5s linear infinite;
+    border: 3px solid transparent;
+    border-top-color: rgb(255,0,0);
+    animation: loading-spinner 2s linear infinite;
 }
 .mid-loading-spinner{
     width: 32px;
     height: 32px;
-    margin: 2px;
+    margin: 5px;
     border-radius: 50%;
-    border: 6px double;
-    border-color: rgb(0,255,0) rgb(192,255,192) rgb(0,255,0) rgb(192,255,192);
+    border: 3px solid transparent;
+    border-top-color: rgb(0,255,0);
+    animation: loading-spinner 2s linear infinite;
 }
 .inner-loading-spinner{
     width: 16px;
     height: 16px;
-    margin: 2px;
+    margin: 5px;
     border-radius: 50%;
-    border: 6px double;
-    border-color: rgb(0,0,255) rgb(192,192,255) rgb(0,0,255) rgb(192,192,255);
+    border: 3px solid transparent;
+    border-top-color: rgb(0,0,255);
+    animation: loading-spinner 2s linear infinite;
 }
 .neon-lights{
     font-family: 'Bad Script', cursive;
@@ -361,40 +384,46 @@ footer{
     display: none;
 }
 #cursor1{
-    border: 2px solid #ff00ff;
-    transition: 0.17s;
+    border: 2px solid var(--textColor);
+    transition: 0.1s;
     width: 5px;
     height: 5px;
+    opacity: 0.5;
 }
 #cursor2{
-    border: 2px solid #0000ff;
-    transition: 0.13s;
-    width: 8px;
-    height: 8px;
+    border: 2px solid var(--textColor);
+    transition: 0.08s;
+    width: 7px;
+    height: 7px;
+    opacity: 0.6;
 }
 #cursor3{
-    border: 2px solid #00ffff;
-    transition: 0.10s;
-    width: 11px;
-    height: 11px;
+    border: 2px solid var(--textColor);
+    transition: 0.06s;
+    width: 9px;
+    height: 9px;
+    opacity: 0.7;
 }
 #cursor4{
-    border: 2px solid #00ff00;
-    transition: 0.07s;
-    width: 14px;
-    height: 14px;
+    border: 2px solid var(--textColor);
+    transition: 0.04s;
+    width: 11px;
+    height: 11px;
+    opacity: 0.8;
 }
 #cursor5{
-    border: 2px solid #ffff00;
-    transition: 0.04s;
-    width: 17px;
-    height: 17px;
+    border: 2px solid var(--textColor);
+    transition: 0.02s;
+    width: 13px;
+    height: 13px;
+    opacity: 0.9;
 }
 #cursor6{
-    border: 2px solid #ff0000;
-    transition: 0.01s;
-    width: 20px;
-    height: 20px;
+    border: 2px solid var(--textColor);
+    transition: 0.00s;
+    width: 15px;
+    height: 15px;
+    opacity: 1;
 }
 @keyframes loading-spinner{
     0% {

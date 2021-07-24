@@ -1,9 +1,5 @@
 @media screen and (max-width: 1024px) {
-    .section{
-        height: auto;
-        margin: 20% 0%;
-    }
-    #contact{
+    #contactForm{
         width: 50%
     }
 }
@@ -20,9 +16,6 @@
     .navbar{
         padding: 10px 15px;
     }
-    .section{
-        margin: 15% 0%;
-    }
     .face{
         display: none;
     }
@@ -38,7 +31,7 @@
     .about-container{
         grid-template-columns: auto auto;
     }
-    #contact{
+    #contactForm{
         width: 60%
     }
     #contactForm input[type=submit], input[type=reset] {
@@ -70,7 +63,7 @@
     .about-container{
         grid-template-columns: auto;
     }
-    #contact{
+    #contactForm{
         width: 70%
     }
     footer{
@@ -86,9 +79,9 @@
         font-size: 20px;
     }
     .section{
-        margin: 10% 0%;
+        margin: 10% 0% 0% 0%;
     }
-    #contact{
+    #contactForm{
         width: 75%
     }
     footer{
@@ -101,7 +94,7 @@
         display: none;
     }
 }
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 300px) {
     h3{
         font-size: 16px;
     }
@@ -131,8 +124,11 @@
     .home-title button a{
         font-size: 12px;
     }
-    #contact{
-        width: 80%
+    .skills-ul{
+        margin: 0px 10px 10px 20px;
+    }
+    #contactForm{
+        width: 80%;
     }
     #contactForm input[type=submit], input[type=reset] {
         padding: 8px 16px;

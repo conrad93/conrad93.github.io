@@ -58,3 +58,19 @@ document.addEventListener("mouseout", () => {
 setInterval(() => {
     dateTime.innerHTML = new Date().toDateString() + ", " + new Date().toLocaleTimeString();
 }, 1000);
+
+function openTabs(evt, tabsName) {
+    var tabIndex, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (tabIndex = 0; tabIndex < tabcontent.length; tabIndex++) {
+        tabcontent[tabIndex].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (tabIndex = 0; tabIndex < tablinks.length; tabIndex++) {
+        tablinks[tabIndex].className = tablinks[tabIndex].className.replace(" active", "");
+    }
+    document.getElementById(tabsName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
