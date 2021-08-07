@@ -71,6 +71,7 @@
                             <span class="tooltip-text">Download resume.</span>
                             <a href="assets/documents/simpleBlackAndWhite.pdf" download="conrad-resume">Resume</a>
                         </button>
+                        <button onclick="webShare()">Share</button>
                     </div>
                     <div class="face">
                         <div class="eyes left-eye"></div>
@@ -176,6 +177,23 @@
                     </a>
                 </div>
             </footer>
+
+            <!-- Modal -->
+            <div class="msgModal">
+                <p>No message</p>
+            </div>
+            <div class="clipboardModal">
+                <div class="clipboardModalContent">
+                    <div class="clipboardModalHeader">
+                        <span onclick="clipboardModalClose()" class="close">&times;</span>
+                        <h4>Web Share API is not supported.</h4>
+                    </div>
+                    <div class="clipboardModalBody">
+                        <input id="linkInput" type="text" value="https://conrad93.github.io/" readonly>
+                        <button onclick="copyLink()">Copy Link</button>
+                    </div>
+                </div>
+            </div>
 
         </div>
 

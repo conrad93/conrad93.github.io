@@ -9,6 +9,9 @@ var cursor4 = document.getElementById("cursor4");
 var cursor5 = document.getElementById("cursor5");
 var cursor6 = document.getElementById("cursor6");
 var dateTime = document.getElementById("date-time");
+var linkInput = document.getElementById("linkInput");
+var msgModal = document.querySelectorAll(".msgModal");
+var clipboardModal = document.querySelector(".clipboardModal");
 var timeout;
 
 switchInput[0].addEventListener('change', () => {
@@ -74,3 +77,49 @@ function openTabs(evt, tabsName) {
 }
 
 document.getElementById("defaultOpen").click();
+
+function webShare(){
+    if(navigator.share){
+        navigator.share({
+            title: "Conrad Nunes",
+            url: "https://conrad93.github.io/",
+            text: "Web Developer (Resume)"
+        }).then(() => {
+            let message = "<p>Thank you! For sharing.</p>";
+            showMsg(message);
+        }).catch(err => {
+            let message = "<p>Something went wrong!!!</p>";
+            showMsg(message);
+            console.log(err);
+        });
+    } else {
+        clipboardModal.style.display = "block";
+    }
+}
+
+function showMsg(msg) {
+    msgModal[0].style.display = "block";
+    msgModal[0].innerHTML = msg;
+    setTimeout(() => {
+        msgModal[0].style.display = "none";
+    }, 3000);
+}
+
+function clipboardModalClose() {
+    clipboardModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == clipboardModal) {
+        clipboardModal.style.display = "none";
+    }
+}
+
+function copyLink(){
+    linkInput.select();
+    linkInput.setSelectionRange(0, linkInput.value.length);
+    document.execCommand("copy");
+    clipboardModal.style.display = "none";
+    let message = `<p>Link copied - ${linkInput.value}</p>`;
+    showMsg(message);
+}

@@ -2,6 +2,9 @@
     #contactForm{
         width: 50%
     }
+    .clipboardModalContent{
+        width: 50%
+    }
 }
 @media screen and (max-width: 900px) {
     h3{
@@ -24,9 +27,8 @@
     }
     .home-title button{
         padding: 10px 24px;
-    }
-    .home-title button a{
         font-size: 14px;
+        margin: 15px 5px 0px 0px;
     }
     .about-container{
         grid-template-columns: auto auto;
@@ -42,6 +44,9 @@
     }
     .tooltip-text{
         font-size: 14px;
+    }
+    .clipboardModalContent{
+        width: 60%
     }
 }
 @media screen and (max-width: 600px) {
@@ -66,6 +71,17 @@
     #contactForm{
         width: 70%
     }
+    .clipboardModalContent{
+        width: 70%
+    }
+    .clipboardModalBody input{
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    .clipboardModalBody button{
+        padding: 5px;
+        margin-bottom: 5px;
+    }
     footer{
         margin: 0% 5%;
         flex-direction: column;
@@ -83,6 +99,12 @@
     }
     #contactForm{
         width: 75%
+    }
+    .clipboardModalContent{
+        width: 75%
+    }
+    .clipboardModalBody input{
+        width: 80%;
     }
     footer{
         flex-direction: column;
@@ -120,8 +142,6 @@
     }
     .home-title button{
         padding: 8px 20px;
-    }
-    .home-title button a{
         font-size: 12px;
     }
     .skills-ul{
@@ -132,5 +152,8 @@
     }
     #contactForm input[type=submit], input[type=reset] {
         padding: 8px 16px;
+    }
+    .clipboardModalContent{
+        width: 80%
     }
 }
