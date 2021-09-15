@@ -12,6 +12,7 @@ var dateTime = document.getElementById("date-time");
 var linkInput = document.getElementById("linkInput");
 var msgModal = document.querySelectorAll(".msgModal");
 var clipboardModal = document.querySelector(".clipboardModal");
+var quoteDiv = document.getElementById("quoteDiv");
 var timeout;
 
 switchInput[0].addEventListener('change', () => {
@@ -123,3 +124,23 @@ function copyLink(){
     let message = `<p>Link copied - ${linkInput.value}</p>`;
     showMsg(message);
 }
+
+function getQuote(){
+    let quoteURL = 'http://conrad93.com/getTodaysQuote.php';
+    fetch(quoteURL)
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        if(data.status) {
+            quoteDiv.innerHTML = `<h2>${data.data[0].quote}</h2><p>- ${data.data[0].author}</p>`;
+        } else {
+            quoteDiv.innerHTML = `<h2>API response - ${data.status}</h2><p style="text-align:center;">${quoteURL}</p>`;
+        }
+    })
+    .catch(error => {
+        console.log(error);
+        quoteDiv.innerHTML = `<h2>${error}</h2><p style="text-align:center;">${quoteURL}</p>`;
+    });
+}
+getQuote();

@@ -10,6 +10,9 @@
     h3{
         font-size: 20px;
     }
+    h2{
+        font-size: 28px;
+    }
     p{
         font-size: 14px;
     }
@@ -63,6 +66,9 @@
         width: 90%
     }
     #about{
+        width: 90%
+    }
+    #quoteDiv{
         width: 90%
     }
     .about-container{
@@ -119,6 +125,9 @@
 @media screen and (max-width: 300px) {
     h3{
         font-size: 16px;
+    }
+    h2{
+        font-size: 24px;
     }
     p{
         font-size: 12px;
