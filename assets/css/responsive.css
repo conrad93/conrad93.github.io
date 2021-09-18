@@ -71,6 +71,9 @@
     #quoteDiv{
         width: 90%
     }
+    #contact{
+        width: 90%
+    }
     .about-container{
         grid-template-columns: auto;
     }

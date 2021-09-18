@@ -1,12 +1,16 @@
 :root{
     --primaryDark: #222831;
-    --secondaryDark: #393e46;
-    --infoDark: #7bc74d;
-    --textDark: #eeeeee;
     --primaryLight: #f7f6e7;
+    --secondaryDark: #393e46;
     --secondaryLight: #e7e6e1;
+    --infoDark: #7bc74d;
     --infoLight: #f2a154;
+    --textDark: #eeeeee;
     --textLight: #314e52;
+    --neoShadowDark1: #17191c;
+    --neoShadowDark2: #5b6370;
+    --neoShadowLight1: #5c5c5a;
+    --neoShadowLight2: #ffffff;
     --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dark-theme{
@@ -14,12 +18,16 @@
     --secondaryColor: var(--secondaryDark);
     --lightColor: var(--infoDark);
     --textColor: var(--textDark);
+    --neoShadow1: var(--neoShadowDark1);
+    --neoShadow2: var(--neoShadowDark2);
 }
 .light-theme{
     --primaryColor: var(--primaryLight);
     --secondaryColor: var(--secondaryLight);
     --lightColor: var(--infoLight);
     --textColor: var(--textLight);
+    --neoShadow1: var(--neoShadowLight1);
+    --neoShadow2: var(--neoShadowLight2);
 }
 html{
     scroll-behavior: smooth;
@@ -198,16 +206,24 @@ p{
     width: 80%;
     color: var(--textColor);
     transition: color 1s;
-    padding: 0px 10px;
+    border-radius: 20px;
+    background: var(--secondaryColor);
+    box-shadow: inset 5px 5px 10px var(--neoShadow1), inset -5px -5px 10px var(--neoShadow2);
 }
 #quoteDiv h2{
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    padding: 0px 15px;
 }
 #quoteDiv p{
     text-align: end;
+    padding: 0px 15px;
 }
 #contact{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
     background-image: linear-gradient(135deg,red,orange,yellow,green,blue,indigo,violet);
 }
 #contactForm{
