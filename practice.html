@@ -8,8 +8,115 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <style>
+            .section{
+                height: auto;
+                margin: 12.5% 0% 0% 0%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #home{
+                display: flex;
+                justify-content: center;
+                width: 80%;
+            }
+            .face{
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                box-shadow: inset 5px 5px 10px #5c5c5a, inset -5px -5px 10px #ffffff;
+                /* background-color: #f2a154; */
+                background-color: #f7f6e7;
+                width:250px;
+                height:250px;
+                border-radius: 50%;
+                position: relative;
+                transition: background-color 0.5s;
+            }
+            .eyes{
+                background-color: #314e52;
+                width:40px;
+                height:40px;
+                border-radius: 50%;
+                position: absolute;
+                top: 25%;
+                transition: background-color 0.5s;
+            }
+            .left-eye{
+                left: 62.5%;
+            }
+            .right-eye{
+                right: 62.5%;
+            }
+            .lips{
+                width: 150px;
+                height: 150px;
+                border: 15px solid transparent;
+                border-bottom: 15px solid #314e52;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: border-bottom 0.5s;
+            }
+            #canvas{
+                border-radius: 50%;
+                border: 1px solid black;
+                width: 100%;
+                height: 100%;
+            }
         </style>
     </head>
     <body>
+        <section class="section">
+            <div id="home">
+                <div class="face">
+                    <canvas id="canvas"></canvas>
+                    <div class="eyes left-eye"></div>
+                    <div class="eyes right-eye"></div>
+                    <div class="lips"></div>
+                </div>
+            </div>
+        </section>
     </body>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        console.log(canvas.width);
+
+        function rain(){
+            let chars = ["。", "い", "う", "え", "お", "か", "が", "き", "く", "ぐ", "げ", "さ", "し", "た", "だ", "っ", "つ", "て", "で", "と", "な", "に", "の", "は", "ぼ", "む", "め", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "中", "光", "円", "切", "夕", "太", "日", "明", "空", "見"];
+            let speed = 100;
+            let start_position = 'top';
+	        let fall_direction = 'bottom';
+            let font_size = 12;
+            let rain = [];
+            // let num_of_cols = parseInt(canvas.width/font_size);
+            let num_of_cols = parseInt(canvas.width/font_size);
+            for (let i = 0; i < num_of_cols; i++) {
+                rain[i] = 1;
+            }
+            window.draw = setInterval(function() {
+                // ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+                ctx.fillStyle = "rgba(247, 246, 231, 0.1)";
+                // ctx.fillStyle = "#f7f6e7";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                // ctx.fillRect(0, 0, 300, 300);
+                ctx.fillStyle = "#f2a154";
+                ctx.font = font_size + "px";
+                for(var i = 0; i < rain.length; i++) {
+                    // random character from the set
+                    var text = chars[Math.floor(Math.random()*chars.length)];
+                    ctx.fillText(text, i*font_size, rain[i]*font_size);
+
+                    if(rain[i]*font_size > canvas.height && Math.random() > 0.975) {
+                        rain[i] = 0;
+                    }
+                    
+                    //incrementing Y coordinate
+                    rain[i]++;
+                }
+            }, speed);
+        }
+        rain();
+    </script>
 </html>
