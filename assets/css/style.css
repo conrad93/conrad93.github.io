@@ -7,10 +7,6 @@
     --infoLight: #f2a154;
     --textDark: #eeeeee;
     --textLight: #314e52;
-    --neoShadowDark1: #17191c;
-    --neoShadowDark2: #5b6370;
-    --neoShadowLight1: #5c5c5a;
-    --neoShadowLight2: #ffffff;
     --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dark-theme{
@@ -18,16 +14,12 @@
     --secondaryColor: var(--secondaryDark);
     --lightColor: var(--infoDark);
     --textColor: var(--textDark);
-    --neoShadow1: var(--neoShadowDark1);
-    --neoShadow2: var(--neoShadowDark2);
 }
 .light-theme{
     --primaryColor: var(--primaryLight);
     --secondaryColor: var(--secondaryLight);
     --lightColor: var(--infoLight);
     --textColor: var(--textLight);
-    --neoShadow1: var(--neoShadowLight1);
-    --neoShadow2: var(--neoShadowLight2);
 }
 html{
     scroll-behavior: smooth;
@@ -174,6 +166,7 @@ p{
     padding: 14px 16px;
     transition: all 0.3s;
     font-size: 16px;
+    outline: none;
 }
 .tab button:hover {
     background-color: var(--lightColor);
@@ -206,9 +199,6 @@ p{
     width: 80%;
     color: var(--textColor);
     transition: color 1s;
-    border-radius: 20px;
-    background: var(--secondaryColor);
-    box-shadow: inset 5px 5px 10px var(--neoShadow1), inset -5px -5px 10px var(--neoShadow2);
 }
 #quoteDiv h2{
     text-align: center;
@@ -224,6 +214,7 @@ p{
     display: flex;
     justify-content: center;
     border-radius: 20px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.25), inset -5px -5px 5px rgba(255, 255, 255, 0.25);
     background-image: linear-gradient(135deg,red,orange,yellow,green,blue,indigo,violet);
 }
 #contactForm{
@@ -266,6 +257,7 @@ p{
     margin-bottom: 1em;
     border-radius: 6px;
     cursor: none;
+    outline: none;
 }
 .inputGlass{
     background: transparent;
@@ -302,6 +294,7 @@ footer{
     text-shadow: var(--shadow);
     transition: color 1s;
     cursor: none;
+    outline: none;
 }
 .footer-icon a:hover{
     color: var(--lightColor);
