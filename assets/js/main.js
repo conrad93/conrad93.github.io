@@ -4,10 +4,6 @@ var main = document.getElementsByClassName("main");
 var cursor = document.getElementsByClassName("cursor");
 var cursor1 = document.getElementById("cursor1");
 var cursor2 = document.getElementById("cursor2");
-var cursor3 = document.getElementById("cursor3");
-var cursor4 = document.getElementById("cursor4");
-var cursor5 = document.getElementById("cursor5");
-var cursor6 = document.getElementById("cursor6");
 var dateTime = document.getElementById("date-time");
 var linkInput = document.getElementById("linkInput");
 var msgModal = document.querySelectorAll(".msgModal");
@@ -37,8 +33,8 @@ document.addEventListener("mousemove", (e) => {
     let x = e.pageX;
     let y = e.pageY;
 
-    cursor1.style.top = cursor2.style.top = cursor3.style.top = cursor4.style.top = cursor5.style.top = cursor6.style.top = y + "px";
-    cursor1.style.left = cursor2.style.left = cursor3.style.left = cursor4.style.left = cursor5.style.left = cursor6.style.left = x + "px";
+    cursor1.style.top = cursor2.style.top = y + "px";
+    cursor1.style.left = cursor2.style.left = x + "px";
     Array.from(cursor).forEach(element => {
         element.style.display = "block";
     });
@@ -140,7 +136,7 @@ function getQuote(){
     })
     .catch(error => {
         console.log(error);
-        quoteDiv.innerHTML = `<h2>${error}</h2><p style="text-align:center;">${quoteURL}</p>`;
+        quoteDiv.innerHTML = `<h2>API not working.</h2><p style="text-align:center;">${quoteURL}</p>`;
     });
 }
 getQuote();
