@@ -9,7 +9,6 @@ var linkInput = document.getElementById("linkInput");
 var msgModal = document.querySelectorAll(".msgModal");
 var clipboardModal = document.querySelector(".clipboardModal");
 var quoteDiv = document.getElementById("quoteDiv");
-var timeout;
 
 switchInput[0].addEventListener('change', () => {
     main[0].classList.toggle('dark-theme');
@@ -30,6 +29,7 @@ function loaderFunction() {
 window.addEventListener('load', loaderFunction);
 
 document.addEventListener("mousemove", (e) => {
+    let timeout;
     let x = e.pageX;
     let y = e.pageY;
 
@@ -45,7 +45,7 @@ document.addEventListener("mousemove", (e) => {
         });
     }
     clearTimeout(timeout);
-    timeout = setTimeout(mouseStopped, 3000);
+    timeout = setTimeout(mouseStopped, 10000);
 
 });
 
@@ -136,7 +136,7 @@ function getQuote(){
     })
     .catch(error => {
         console.log(error);
-        quoteDiv.innerHTML = `<h2>API not working.</h2><p style="text-align:center;">${quoteURL}</p>`;
+        quoteDiv.innerHTML = `<h2>My code DOESN’T work, I have no idea why. My code WORKS, I have no idea why.</h2><p>- Anonymous</p>`;
     });
 }
 getQuote();
