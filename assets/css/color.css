@@ -18,7 +18,7 @@
 .dark-theme{
     --primaryColor: var(--primaryDark);
     --secondaryColor: var(--secondaryDark);
-    --lightColor: var(--infoDark);
+    --infoColor: var(--infoDark);
     --textColor: var(--textDark);
     --shadow1Color: var(--shadow1Dark);
     --shadow2Color: var(--shadow2Dark);
@@ -26,7 +26,7 @@
 .light-theme{
     --primaryColor: var(--primaryLight);
     --secondaryColor: var(--secondaryLight);
-    --lightColor: var(--infoLight);
+    --infoColor: var(--infoLight);
     --textColor: var(--textLight);
     --shadow1Color: var(--shadow1Light);
     --shadow2Color: var(--shadow2Light);

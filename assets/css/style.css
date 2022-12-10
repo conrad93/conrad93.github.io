@@ -5,12 +5,12 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--secondaryColor);
+    height: 100vh;
+    width: 100vw;
 }
 .main{
     display: none;
-    opacity: 0;
-    background-color: var(--secondaryColor);
-    transition: opacity 1s ease-in, background-color 0.5s;
 }
 h3{
     font-size: 24px;
@@ -71,7 +71,7 @@ p{
     font-size: 24px;
 }
 .close:hover, .close:focus {
-    color: var(--lightColor);
+    color: var(--infoColor);
 }
 .clipboardModalHeader {
     padding: 1px 10px;
@@ -88,7 +88,7 @@ p{
 }
 .clipboardModalBody button{
     background-color: transparent;
-    border: 1px solid var(--lightColor);
+    border: 1px solid var(--infoColor);
     outline: none;
     border-radius: 10px;
     padding: 5px 10px;
@@ -98,7 +98,7 @@ p{
     color: var(--textColor);
 }
 .clipboardModalBody button:hover{
-    background-color: var(--lightColor);
+    background-color: var(--infoColor);
     border: 1px solid transparent;
     box-shadow: var(--shadow);
 }
