@@ -3,6 +3,7 @@ import Experience from "./Experience";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
+import Projects from "./Projects";
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                     <Hero />
                     <About />
                     <Experience />
+                    <Projects />
                 </div>
                 <div className="col-span-1 h-full">
                 </div>
