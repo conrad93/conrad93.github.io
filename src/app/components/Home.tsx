@@ -1,4 +1,5 @@
 import About from "./About";
+import ContactMe from "./ContactMe";
 import Experience from "./Experience";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -15,6 +16,7 @@ export default function Home() {
                     <About />
                     <Experience />
                     <Projects />
+                    <ContactMe />
                 </div>
                 <div className="col-span-1 h-full">
                 </div>
