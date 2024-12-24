@@ -7,7 +7,7 @@ const Hero = () => {
           I&apos;m <span className="font-bold">Full Stack Developer</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto md:mx-0">
-          JavaScript | TypeScript | MongoDB
+          JavaScript | TypeScript | MongoDB | MySql
         </p>
       </div>
     </section>

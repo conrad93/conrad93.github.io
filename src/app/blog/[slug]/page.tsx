@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import StakeAd from "@/components/StakeAd";
 import Image from "next/image";
 
 enum ContentType {
@@ -160,6 +161,7 @@ export default function Blog() {
             <Navbar />
             <main className="grid grid-cols-4">
                 <div className="col-span-3 h-full">
+                    <StakeAd />
                     <section className="bg-white text-dark border-2 border-black flex items-center justify-center">
                         <div className="px-4 py-8 md:py-16 lg:py-24 text-center md:text-left">
                             
