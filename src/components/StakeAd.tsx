@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const StakeAd = () => {
-    const link = process.env.STAKE_REFERRAL_LINK;
+    const link = process.env.STAKE_REFERRAL_LINK || "";
 
     return (
         <section className="bg-white text-dark border-2 border-black flex items-center justify-center">
             <div className="p-1 text-center md:text-left">
-                <a href={link} target="_blank" rel="noopener noreferrer">
+                <Link href={link} target="_blank">
                     <div className="hidden lg:block">
                         <Image 
                             src={"/images/stake/Stake-Banners-970x90.jpg"} 
@@ -34,7 +35,7 @@ const StakeAd = () => {
                             priority={true}
                         />
                     </div>
-                </a>
+                </Link>
             </div>
         </section>
     );

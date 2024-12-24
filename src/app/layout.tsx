@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import ToastWrapper from "@/containers/ToastWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Conrad Nunes",
-  description: "Personal website of Conrad Nunes, a full stack JS/Ts developer.",
+  description: "Personal website of Conrad Nunes, a full stack JS/TS developer.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ToastWrapper>
           {children}
+        </ToastWrapper> 
       </body>
     </html>
   );

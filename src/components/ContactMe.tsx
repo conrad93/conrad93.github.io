@@ -1,5 +1,6 @@
 "use client";
 
+import { useToast } from "@/contexts/ToastContext";
 import { useState } from "react";
 
 const ContactMe = () => {
@@ -7,7 +8,8 @@ const ContactMe = () => {
     const [email, setEmail] = useState<string>('');
     const [subject, setSubject] = useState<string>('');
     const [message, setMessage] = useState<string>('');
-    const [error, setError] = useState<string | null>(null);
+
+    const { addToast } = useToast();
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setName(e.target.value);
@@ -31,10 +33,9 @@ const ContactMe = () => {
 
     const validateForm = (): boolean => {
         if (!name || !email || !subject || !message) {
-            setError('Please fill in all fields');
+            addToast('Please fill in all fields', 'fail', 3000);
             return false;
         }
-        setError(null);
         return true;
     };
 
@@ -51,7 +52,6 @@ const ContactMe = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center md:text-left">
                     Contact Me
                 </h2>
-                {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
                 <form className="space-y-4 max-w-2xl mx-auto md:mx-0" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="sr-only">Name</label>
                     <input type='text' placeholder='Name' id="name" name="name" autoComplete="name" onChange={handleNameChange}
