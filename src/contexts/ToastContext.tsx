@@ -1,9 +1,10 @@
 "use client";
 
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useRef, useState } from "react";
+import { generateUniqueId } from "@/lib/utility";
 
 interface Toast {
-    id: number;
+    id: string;
     message: string;
     type: "pass" | "fail" | "info" | "warn";
     duration: number;
@@ -12,22 +13,30 @@ interface Toast {
 interface ToastContextType {
     toasts: Toast[];
     addToast: (message: string, type: "pass" | "fail" | "info" | "warn", duration: number) => void;
-    removeToast: (id: number) => void;
+    removeToast: (id: string) => void;
 };
 
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
     const [toasts, setToasts] = useState<Toast[]>([]);
+    const timers = useRef<{ [key: string]: NodeJS.Timeout }>({});
 
     const addToast = (message: string, type: "pass" | "fail" | "info" | "warn", duration: number) => {
-        const id = Date.now();
-        setToasts([...toasts, { id, message, type, duration }]);
-        setTimeout(() => removeToast(id), duration);
+        const id = generateUniqueId();
+        setToasts((prevToasts) => [...prevToasts, { id, message, type, duration }]);
+        timers.current[id] = setTimeout(() => {
+            removeToast(id);
+            delete timers.current[id];
+        }, duration);
     };
 
-    const removeToast = (id: number) => {
-        setToasts(toasts.filter(toast => toast.id !== id));
+    const removeToast = (id: string) => {
+        setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id));
+        if (timers.current[id]) {
+            clearTimeout(timers.current[id]);
+            delete timers.current[id];
+        }
     };
 
     return (

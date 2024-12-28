@@ -55,16 +55,16 @@ const ContactMe = () => {
                 <form className="space-y-4 max-w-2xl mx-auto md:mx-0" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="sr-only">Name</label>
                     <input type='text' placeholder='Name' id="name" name="name" autoComplete="name" onChange={handleNameChange}
-                        className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm outline-black" />
+                        className="w-full py-3 px-4 text-gray-800 bg-gray-200 focus:bg-transparent text-sm outline-black" />
                     <label htmlFor="email" className="sr-only">Email</label>
                     <input type='email' placeholder='Email' id="email" name="email" autoComplete="email" onChange={handleEmailChange}
-                        className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm outline-black" />
+                        className="w-full py-3 px-4 text-gray-800 bg-gray-200 focus:bg-transparent text-sm outline-black" />
                     <label htmlFor="subject" className="sr-only">Subject</label>
                     <input type='text' placeholder='Subject' id="subject" name="subject" onChange={handleSubjectChange}
-                        className="w-full py-3 px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm outline-black" />
+                        className="w-full py-3 px-4 text-gray-800 bg-gray-200 focus:bg-transparent text-sm outline-black" />
                     <label htmlFor="message" className="sr-only">Message</label>
                     <textarea placeholder='Message' rows={6} id="message" name="message" onChange={handleMessageChange}
-                        className="w-full px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm pt-3 outline-black"></textarea>
+                        className="w-full px-4 text-gray-800 bg-gray-200 focus:bg-transparent text-sm pt-3 outline-black"></textarea>
                     <button type='submit'
                         className="text-white bg-black hover:bg-gray-600 tracking-wide text-sm px-4 py-3 w-full">Send</button>
                 </form>

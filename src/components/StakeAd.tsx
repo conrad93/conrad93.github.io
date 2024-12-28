@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const StakeAd = () => {
-    const link = process.env.STAKE_REFERRAL_LINK || "";
+    const link = process.env.NEXT_PUBLIC_STAKE_REFERRAL_LINK || "";
 
     return (
         <section className="bg-white text-dark border-2 border-black flex items-center justify-center">
